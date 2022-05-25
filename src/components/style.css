@@ -1,0 +1,11 @@
+.tabled{
+    border:3px solid black;
+    width:100px;
+    height:100px;
+    background-color:blue;
+    color:white
+}
+.main{
+    display: flex;
+    justify-content:center;
+}
