@@ -3,7 +3,20 @@ import "./style.css"
 export const Square=({turn,cell,handleTic,winner,handleRestart,draw})=>{
     return(
         <div>
-        <h4>Player {turn}'s turn</h4>
+            <span className="spanflex">
+                <h1 className="tic1">T</h1>
+                <h1 className="tic2">I</h1>
+                <h1 className="tic3">C</h1>
+                <h1 className="tic4">-</h1>
+                <h1 className="tic5">T</h1>
+                <h1 className="tic6">A</h1>
+                <h1 className="tic7">C</h1>
+                <h1 className="tic8">-</h1>
+                <h1 className="tic9">T</h1>
+                <h1 className="tic9">O</h1>
+                <h1 className="tic10">E</h1>
+          </span>
+        <h2>Player {turn}'s turn</h2>
         <div className="main"> 
         <table>
             <tbody>
@@ -27,12 +40,12 @@ export const Square=({turn,cell,handleTic,winner,handleRestart,draw})=>{
         </div>
         {winner &&(
             <>
-            <h1>{winner} is the winner</h1>
-            <button onClick={()=>handleRestart()}>Play Again</button>
+            <h1 className="winner">{winner} is the winner</h1>
+            <button className="winnerb" onClick={()=>handleRestart()}>Play Again</button>
             </>
         )}
-        {draw?<div><h1>It's a draw, Restart the game</h1>
-        <button onClick={()=>handleRestart()}>Play Again</button></div>:null}
+        {draw?<div className="winner2"><h1>It's a draw, Restart the game</h1>
+        <button className="winnerb" onClick={()=>handleRestart()}>Play Again</button></div>:null}
         </div>
     )
 }
